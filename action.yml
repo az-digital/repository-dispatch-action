@@ -2,7 +2,7 @@ name: "Repository Dispatch"
 description: "Send a notification to subscribing repositories"
 author: Arizona Digital
 inputs:
-  repos:
+  repo:
     description: 'A repo (with namespace) to notify'
     required: true
   payload:
