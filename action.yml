@@ -1,0 +1,19 @@
+name: "Repository Dispatch"
+description: "Send a notification to subscribing repositories"
+author: Arizona Digital
+inputs:
+  repos:
+    description: 'A repo (with namespace) to notify'
+    required: true
+  payload:
+    description: 'The payload to send in the notification'
+    required: true
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.repo }}
+    - ${{ inputs.payload }}
+branding:
+  icon: send
+  color: green
